@@ -1,0 +1,5 @@
+name: CyclicCazilorCustons
+version: '${project.version}'
+main: org.wee.cycliccazilorcustons.CyclicCazilorCustons
+api-version: '1.20'
+authors: [Cyclic and Janduce]
