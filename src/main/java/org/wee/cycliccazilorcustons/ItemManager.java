@@ -1,17 +1,14 @@
 package org.wee.cycliccazilorcustons;
-import java.util.ArrayList;
-import java.util.List;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
-import org.bukkit.inventory.FurnaceRecipe;
-import org.bukkit.inventory.ItemFlag;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.Recipe;
-import org.bukkit.inventory.ShapedRecipe;
-import org.bukkit.inventory.ShapelessRecipe;
+import org.bukkit.inventory.*;
 import org.bukkit.inventory.meta.ItemMeta;
+
+import java.util.ArrayList;
+import java.util.List;
 public class ItemManager{
 public static ItemStack one_rifle;
 public static ItemStack shotgun;
@@ -26,6 +23,7 @@ public static void init() {
     createmermaidcharm();
     createfloatcharm();
     createfangshield();
+
 }
 public static ItemStack mermaid_charm; public static ItemStack float_charm; public static ItemStack whip; public static ItemStack fire_stick; public static ItemStack fang_shield;
 private static void createonerifle() {
@@ -37,18 +35,19 @@ private static void createonerifle() {
     lore.add("§7found in Feudal Japan");
     meta.setLore(lore);
     meta.addEnchant(Enchantment.LUCK, 1, false);
-    meta.addItemFlags(new ItemFlag[] { ItemFlag.HIDE_ENCHANTS });
+    meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+
     item.setItemMeta(meta);
     one_rifle = item;
 
     ShapedRecipe or = new ShapedRecipe(NamespacedKey.minecraft("onerifle"), item);
-    or.shape(new String[] { "wi ", "gcn", "ii " });
+    or.shape("wi ", "gcn", "ii ");
     or.setIngredient('i', Material.IRON_INGOT);
     or.setIngredient('g', Material.GUNPOWDER);
     or.setIngredient('c', Material.CROSSBOW);
     or.setIngredient('w', Material.TRIPWIRE_HOOK);
     or.setIngredient('n', Material.NETHERITE_INGOT);
-    Bukkit.getServer().addRecipe((Recipe)or);
+    Bukkit.getServer().addRecipe(or);
 }
 
 private static void createshotgun() {
@@ -60,17 +59,17 @@ private static void createshotgun() {
     lore.add("§7fires in a spread pattern");
     meta.setLore(lore);
     meta.addEnchant(Enchantment.MULTISHOT, 1, false);
-    meta.addItemFlags(new ItemFlag[] { ItemFlag.HIDE_ENCHANTS });
+    meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
     item.setItemMeta(meta);
     shotgun = item;
 
     ShapedRecipe sg = new ShapedRecipe(NamespacedKey.minecraft("shotgun"), item);
-    sg.shape(new String[] { "wi ", "gci", "ii " });
+    sg.shape("wi ", "gci", "ii ");
     sg.setIngredient('i', Material.IRON_INGOT);
     sg.setIngredient('g', Material.GUNPOWDER);
     sg.setIngredient('c', Material.CROSSBOW);
     sg.setIngredient('w', Material.TRIPWIRE_HOOK);
-    Bukkit.getServer().addRecipe((Recipe)sg);
+    Bukkit.getServer().addRecipe(sg);
 }
 
 private static void createweakthrowbomb() {
@@ -81,16 +80,16 @@ private static void createweakthrowbomb() {
     lore.add("§fHas a light explosive effect when threw");
     meta.setLore(lore);
     meta.addEnchant(Enchantment.LUCK, 1, false);
-    meta.addItemFlags(new ItemFlag[] { ItemFlag.HIDE_ENCHANTS });
+    meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
     item.setItemMeta(meta);
     weak_throw_bomb = item;
 
     ShapedRecipe wtb = new ShapedRecipe(NamespacedKey.minecraft("weakthrowbomb"), item);
-    wtb.shape(new String[] { " g ", "ibi", " i " });
+    wtb.shape(" g ", "ibi", " i ");
     wtb.setIngredient('b', Material.GLASS_BOTTLE);
     wtb.setIngredient('i', Material.IRON_INGOT);
     wtb.setIngredient('g', Material.GUNPOWDER);
-    Bukkit.getServer().addRecipe((Recipe)wtb);
+    Bukkit.getServer().addRecipe(wtb);
 }
 
 private static void createthrowbomb() {
@@ -102,16 +101,16 @@ private static void createthrowbomb() {
     lore.add("§fHas an explosive effect when threw");
     meta.setLore(lore);
     meta.addEnchant(Enchantment.LUCK, 1, false);
-    meta.addItemFlags(new ItemFlag[] { ItemFlag.HIDE_ENCHANTS });
+    meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
     item.setItemMeta(meta);
     throw_bomb = item;
 
     ShapedRecipe tb = new ShapedRecipe(NamespacedKey.minecraft("throwbomb"), item);
-    tb.shape(new String[] { " t ", "ibi", " i " });
+    tb.shape(" t ", "ibi", " i ");
     tb.setIngredient('b', Material.GLASS_BOTTLE);
     tb.setIngredient('i', Material.IRON_INGOT);
     tb.setIngredient('t', Material.TNT);
-    Bukkit.getServer().addRecipe((Recipe)tb);
+    Bukkit.getServer().addRecipe(tb);
 }
 
 private static void createmermaidcharm() {
@@ -123,16 +122,18 @@ private static void createmermaidcharm() {
     lore.add("§flets the user harness the power of the sea");
     meta.setLore(lore);
     meta.addEnchant(Enchantment.LUCK, 1, false);
-    meta.addItemFlags(new ItemFlag[] { ItemFlag.HIDE_ENCHANTS });
+    meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+    meta.setCustomModelData(2);
     item.setItemMeta(meta);
+
     mermaid_charm = item;
 
     ShapedRecipe mc = new ShapedRecipe(NamespacedKey.minecraft("mermaidcharm"), item);
-    mc.shape(new String[] { "sps", "scs", "sss" });
+    mc.shape("sps", "scs", "sss");
     mc.setIngredient('s', Material.NAUTILUS_SHELL);
     mc.setIngredient('c', Material.CONDUIT);
     mc.setIngredient('p', Material.PUFFERFISH);
-    Bukkit.getServer().addRecipe((Recipe)mc);
+    Bukkit.getServer().addRecipe(mc);
 }
 
 private static void createfloatcharm() {
@@ -145,15 +146,15 @@ private static void createfloatcharm() {
     lore.add("§fwhen held grants user levitation");
     meta.setLore(lore);
     meta.addEnchant(Enchantment.LUCK, 1, false);
-    meta.addItemFlags(new ItemFlag[] { ItemFlag.HIDE_ENCHANTS });
+    meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
     item.setItemMeta(meta);
     float_charm = item;
 
     ShapedRecipe fc = new ShapedRecipe(NamespacedKey.minecraft("floatcharm"), item);
-    fc.shape(new String[] { "ppp", "psp", "ppp" });
+    fc.shape("ppp", "psp", "ppp");
     fc.setIngredient('p', Material.POPPED_CHORUS_FRUIT);
     fc.setIngredient('s', Material.NETHER_STAR);
-    Bukkit.getServer().addRecipe((Recipe)fc);
+    Bukkit.getServer().addRecipe(fc);
 }
 
 private static void createfangshield() {
@@ -170,18 +171,18 @@ private static void createfangshield() {
     fang_shield = item;
 
     ShapedRecipe fs = new ShapedRecipe(NamespacedKey.minecraft("fangshield"), item);
-    fs.shape(new String[] { " t ", " e ", " s " });
+    fs.shape(" t ", " e ", " s ");
     fs.setIngredient('t', Material.POINTED_DRIPSTONE);
     fs.setIngredient('e', Material.EXPERIENCE_BOTTLE);
     fs.setIngredient('s', Material.SHIELD);
-    Bukkit.getServer().addRecipe((Recipe)fs);
+    Bukkit.getServer().addRecipe(fs);
 
     ShapelessRecipe pc = new ShapelessRecipe(NamespacedKey.minecraft("popchor"), new ItemStack(Material.CHORUS_FRUIT, 1));
     pc.addIngredient(1, Material.ENDER_PEARL);
     pc.addIngredient(1, Material.BEETROOT);
-    Bukkit.getServer().addRecipe((Recipe)pc);
+    Bukkit.getServer().addRecipe(pc);
 
     FurnaceRecipe rfs = new FurnaceRecipe(NamespacedKey.minecraft("rotflss"), new ItemStack(Material.LEATHER, 1), Material.ROTTEN_FLESH, 1.0F, 200);
-    Bukkit.getServer().addRecipe((Recipe)rfs);
+    Bukkit.getServer().addRecipe(rfs);
 }
  }
