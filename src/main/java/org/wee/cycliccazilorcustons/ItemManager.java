@@ -25,7 +25,12 @@ public static void init() {
     createfangshield();
 
 }
-public static ItemStack mermaid_charm; public static ItemStack float_charm; public static ItemStack whip; public static ItemStack fire_stick; public static ItemStack fang_shield;
+
+    public static ItemStack mermaid_charm;
+    public static ItemStack float_charm;
+    public static ItemStack whip;
+    public static ItemStack jackDanals;
+    public static ItemStack fang_shield;
 private static void createonerifle() {
     ItemStack item = new ItemStack(Material.CROSSBOW, 1);
     ItemMeta meta = item.getItemMeta();
