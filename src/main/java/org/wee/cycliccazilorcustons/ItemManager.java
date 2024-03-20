@@ -38,6 +38,7 @@ public static void init() {
 private static void createonerifle() {
     ItemStack item = new ItemStack(Material.CROSSBOW, 1);
     ItemMeta meta = item.getItemMeta();
+    assert meta != null;
     meta.setDisplayName("§4Tanegashima");
     List<String> lore = new ArrayList<>();
     lore.add("§7Ancient form of a rifle");
@@ -62,6 +63,7 @@ private static void createonerifle() {
 private static void createshotgun() {
     ItemStack item = new ItemStack(Material.CROSSBOW, 1);
     ItemMeta meta = item.getItemMeta();
+    assert meta != null;
     meta.setDisplayName("§4Blunderbuss");
     List<String> lore = new ArrayList<>();
     lore.add("§7Pirate Shotgun");
@@ -84,6 +86,7 @@ private static void createshotgun() {
 private static void createweakthrowbomb() {
     ItemStack item = new ItemStack(Material.SPLASH_POTION, 1);
     ItemMeta meta = item.getItemMeta();
+    assert meta != null;
     meta.setDisplayName("§6Light Powder Bag");
     List<String> lore = new ArrayList<>();
     lore.add("§fHas a light explosive effect when threw");
@@ -104,6 +107,7 @@ private static void createweakthrowbomb() {
 private static void createthrowbomb() {
     ItemStack item = new ItemStack(Material.SPLASH_POTION, 1);
     ItemMeta meta = item.getItemMeta();
+    assert meta != null;
     meta.setDisplayName("§6Powder Bag");
     List<String> lore = new ArrayList<>();
     lore.add("§4Don't Put This in Your Kitchen");
@@ -125,6 +129,7 @@ private static void createthrowbomb() {
 private static void createmermaidcharm() {
     ItemStack item = new ItemStack(Material.HEART_OF_THE_SEA, 1);
     ItemMeta meta = item.getItemMeta();
+    assert meta != null;
     meta.setDisplayName("§1Mermaids Charm");
     List<String> lore = new ArrayList<>();
     lore.add("§fCharm discovered by Pirates");
@@ -148,6 +153,7 @@ private static void createmermaidcharm() {
 private static void createfloatcharm() {
     ItemStack item = new ItemStack(Material.POPPED_CHORUS_FRUIT, 1);
     ItemMeta meta = item.getItemMeta();
+    assert meta != null;
     meta.setDisplayName("§5Charm of Levitation");
     List<String> lore = new ArrayList<>();
     lore.add("§fItem long abandoned from");
@@ -169,6 +175,7 @@ private static void createfloatcharm() {
 private static void createfangshield() {
     ItemStack item = new ItemStack(Material.SHIELD, 1);
     ItemMeta meta = item.getItemMeta();
+    assert meta != null;
     meta.setDisplayName("§4Shield of the Maw");
     List<String> lore = new ArrayList<>();
     lore.add("§0Uses black magic");
@@ -224,9 +231,9 @@ private static void createfangshield() {
         meta.setDisplayName("Whip");
         meta.setCustomModelData(70);
         List<String> lore = new ArrayList<>();
-        lore.add("And you whip and you ne ne");
+        lore.add("And you whip and you ney ney");
         meta.setLore(lore);
-        meta.addEnchant(Enchantment.SWEEPING_EDGE, 30, true);
+        meta.addEnchant(Enchantment.SWEEPING_EDGE, 1, true);
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         item.setItemMeta(meta);
 
