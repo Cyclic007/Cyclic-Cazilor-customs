@@ -9,6 +9,9 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.bukkit.Bukkit.getLogger;
+
 public class ItemManager{
 public static ItemStack one_rifle;
 public static ItemStack shotgun;
@@ -23,13 +26,14 @@ public static void init() {
     createmermaidcharm();
     createfloatcharm();
     createfangshield();
+    createJack();
 
 }
 
     public static ItemStack mermaid_charm;
     public static ItemStack float_charm;
     public static ItemStack whip;
-    public static ItemStack jackDanals;
+    public static ItemStack JackDanals;
     public static ItemStack fang_shield;
 private static void createonerifle() {
     ItemStack item = new ItemStack(Material.CROSSBOW, 1);
@@ -190,4 +194,24 @@ private static void createfangshield() {
     FurnaceRecipe rfs = new FurnaceRecipe(NamespacedKey.minecraft("rotflss"), new ItemStack(Material.LEATHER, 1), Material.ROTTEN_FLESH, 1.0F, 200);
     Bukkit.getServer().addRecipe(rfs);
 }
+
+    private static void createJack() {
+        ItemStack item = new ItemStack(Material.HONEY_BOTTLE, 4);
+        ItemMeta meta = item.getItemMeta();
+        assert meta != null;
+        meta.setDisplayName("Jack Danals");
+        List<String> lore = new ArrayList<>();
+        lore.add("YAY a fitting bevrige");
+        meta.setLore(lore);
+        item.setItemMeta(meta);
+        JackDanals = item;
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("jackdanals"), item);
+        sr.shape("HWH", "WBW", "HWH");
+        sr.setIngredient('W', Material.WHEAT);
+        sr.setIngredient('B', Material.GLASS_BOTTLE);
+        sr.setIngredient('H', Material.HONEY_BOTTLE);
+        Bukkit.getServer().addRecipe(sr);
+        getLogger().info("yay");
+    }
  }
