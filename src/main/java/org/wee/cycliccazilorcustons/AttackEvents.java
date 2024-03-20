@@ -8,6 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
+//TODO make entity to detect and damage mobs from the vectors
 
 public class AttackEvents implements Listener {
     @EventHandler
