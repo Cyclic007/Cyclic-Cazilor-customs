@@ -204,6 +204,8 @@ private static void createfangshield() {
         lore.add("YAY a fitting bevrige");
         meta.setLore(lore);
         item.setItemMeta(meta);
+        meta.addEnchant(Enchantment.LUCK, 1, true);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         JackDanals = item;
 
         ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("jackdanals"), item);
