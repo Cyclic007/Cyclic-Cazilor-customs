@@ -27,7 +27,7 @@ public static void init() {
     createfloatcharm();
     createfangshield();
     createJack();
-
+    createwhip();
 }
 
     public static ItemStack mermaid_charm;
@@ -213,5 +213,29 @@ private static void createfangshield() {
         sr.setIngredient('H', Material.HONEY_BOTTLE);
         Bukkit.getServer().addRecipe(sr);
         getLogger().info("yay");
+    }
+
+    private static void createwhip() {
+        ItemStack item = new ItemStack(Material.NETHERITE_SWORD, 1);
+        ItemMeta meta = item.getItemMeta();
+        assert meta != null;
+        meta.setDisplayName("Whip");
+        meta.setCustomModelData(70);
+        List<String> lore = new ArrayList<>();
+        lore.add("And you whip and you ne ne");
+        meta.setLore(lore);
+        meta.addEnchant(Enchantment.SWEEPING_EDGE, 30, true);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        item.setItemMeta(meta);
+
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("whip"), item);
+        sr.shape("tl ", " s ", "  s");
+        sr.setIngredient('l', Material.LEATHER);
+        sr.setIngredient('t', Material.STICK);
+        sr.setIngredient('s', Material.STRING);
+        Bukkit.getServer().addRecipe(sr);
+        getLogger().info("yay the second time");
+
     }
  }
