@@ -24,17 +24,18 @@ public class ConsumeEvents implements Listener {
                                 player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 225, 20));
                             }
                         } else {
-                            player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 1, 2000));
+                            player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 2000, 1));
                         }
                     } else {
-                        player.addPotionEffect(new PotionEffect(PotionEffectType.DARKNESS, 6, 2000));
+                        player.addPotionEffect(new PotionEffect(PotionEffectType.DARKNESS, 2000, 6));
                     }
                 } else {
-                    player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 3, 6000));
+                    player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 6000, 3));
                 }
             } else {
                 player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 6000, 2));
             }
+            player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 6000, 1));
         }
     }
 }

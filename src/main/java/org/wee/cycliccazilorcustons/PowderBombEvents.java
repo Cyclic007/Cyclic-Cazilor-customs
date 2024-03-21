@@ -1,11 +1,13 @@
 package org.wee.cycliccazilorcustons;
 
+import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.ThrownPotion;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.PotionSplashEvent;
 import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.metadata.FixedMetadataValue;
@@ -46,6 +48,21 @@ public class PowderBombEvents implements Listener {
             }
 
         }
+    }
+
+    @EventHandler
+    public void bar(PotionSplashEvent event) {
+        Entity entity = event.getEntity();
+        ThrownPotion potion = event.getPotion();
+        Location loc = potion.getLocation();
+        if (potion.hasMetadata("Explosive") || potion.hasMetadata("Explosive2")) {
+            if (potion.hasMetadata("Explosive")) {
+                event.getEntity().getWorld().createExplosion(loc, 1.5f, false, true);
+            } else {
+                event.getEntity().getWorld().createExplosion(loc, 2.5f, false, true);
+            }
+        }
+
     }
 }
 
