@@ -14,7 +14,6 @@ public class blockGrider {
                 grid[i][e]= new  int[]{block.getX()-2+i, block.getY(), block.getZ()-2+e};
             }
         }
-
         return grid;
     }
 }

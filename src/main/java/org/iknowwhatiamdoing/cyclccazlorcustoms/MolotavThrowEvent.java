@@ -1,5 +1,6 @@
 package org.iknowwhatiamdoing.cyclccazlorcustoms;
 
+import jdk.javadoc.internal.doclint.HtmlTag;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -93,25 +94,32 @@ public class MolotavThrowEvent implements Listener {
             }
         }
     }
+    public static Block block1;
     @EventHandler
     public static void steve(ProjectileHitEvent event){
+
         Projectile projectile = event.getEntity();
         Location location = projectile.getLocation();
         World world = projectile.getWorld();
         Block block = location.getBlock();
         if(projectile.hasMetadata("author")){
-            int[][][] name = {{
-                    {},{},{},{},{}
-            },{
-                    {},{},{},{},{}
-            },{
-                    {},{},{},{},{}
-            },{
-                    {},{},{},{},{}
-            },{
-                    {},{},{},{},{}
+            int[][][] name = blockGrider.gridIt(block,5);
+            int i, e;
+            for (i=0; i<5;i++){
+                for(e=0;e<5;e++){
+                    while(true){
+                        block1 = world.getBlockAt(name[e][i][1],name[e][i][2],name[e][i][3]);
+                        if(block1.getType() == Material.AIR){
+                            break;
+                        }else {
+                            name[e][i][3]++;
+                        }
+                    }
+                    block1.setType(Material.FIRE);
+
+                }
             }
-            };
+
         }
 
     }
