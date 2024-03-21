@@ -13,9 +13,7 @@ import org.bukkit.Location;
 /*    */ import org.bukkit.inventory.ItemStack;
 
 /*    */
-/*    */ public class ShieldEvents
-        /*    */ implements Listener
-        /*    */ {
+/*    */ public class ShieldEvents implements Listener {
     /*    */
     @EventHandler
     /*    */ public static void onPlayerClick(PlayerInteractEvent event) {

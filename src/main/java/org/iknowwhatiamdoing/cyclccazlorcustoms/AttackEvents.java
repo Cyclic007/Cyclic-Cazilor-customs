@@ -21,8 +21,7 @@ public class AttackEvents implements Listener {
 
         if (item == ItemManager.whip && player.isHandRaised()) {
             face.multiply(5);
-            Vector left = face.clone();
-            Vector right = face.clone();
+
         }
     }
 }
