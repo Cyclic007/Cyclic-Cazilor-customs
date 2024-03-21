@@ -1,0 +1,4 @@
+name: Cyclc Cazlor customs
+version: '${project.version}'
+main: org.iknowwhatiamdoing.cyclccazlorcustoms.CyclcCazlorCustoms
+api-version: '1.20'
