@@ -215,13 +215,14 @@ private static void createfangshield() {
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         JackDanals = item;
 
-        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("jackdanals"), item);
-        sr.shape("HWH", "WBW", "HWH");
-        sr.setIngredient('W', Material.WHEAT);
-        sr.setIngredient('B', Material.GLASS_BOTTLE);
-        sr.setIngredient('H', Material.HONEY_BOTTLE);
-        Bukkit.getServer().addRecipe(sr);
-        getLogger().info("yay");
+        ShapedRecipe shr = new ShapedRecipe(NamespacedKey.minecraft("jackdanals"), item);
+        shr.shape("HWH", "WBW", "HWH");
+        shr.setIngredient('W', Material.WHEAT);
+        shr.setIngredient('B', Material.GLASS_BOTTLE);
+        shr.setIngredient('H', Material.HONEY_BOTTLE);
+        Bukkit.getServer().addRecipe(shr);
+        Bukkit.getLogger().info("the jack is ready");
+
     }
 
     private static void createwhip() {
