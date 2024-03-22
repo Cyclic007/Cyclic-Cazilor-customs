@@ -1,13 +1,10 @@
 package org.iknowwhatiamdoing.cyclccazlorcustoms;
 
 import org.bukkit.ChatColor;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.event.Listener;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /*    */
-/*    */ public class CazilorCustoms extends JavaPlugin {
+/*    */ public class CyclcCazlorCustoms extends JavaPlugin {
     /*    */
     public void onEnable() {
         /* 16 */

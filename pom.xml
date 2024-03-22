@@ -58,6 +58,11 @@
           <id>sonatype</id>
           <url>https://oss.sonatype.org/content/groups/public/</url>
       </repository>
+      <repository>
+          <id>jitpack.io</id>
+          <url>https://jitpack.io</url>
+      </repository>
+
   </repositories>
 
   <dependencies>
@@ -66,6 +71,12 @@
           <artifactId>spigot-api</artifactId>
           <version>1.20.4-R0.1-SNAPSHOT</version>
           <scope>provided</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.github.rogermiranda1000</groupId>
+          <artifactId>WatchWolf-Tester</artifactId>
+          <version>0.1.1</version>
+          <scope>compile</scope>
       </dependency>
   </dependencies>
 </project>
