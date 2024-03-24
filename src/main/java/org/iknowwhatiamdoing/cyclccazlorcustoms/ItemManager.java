@@ -226,7 +226,7 @@ public class ItemManager{
         }
 
         private static void createwhip() {
-            ItemStack item = new ItemStack(Material.NETHERITE_SWORD, 1);
+            ItemStack item = new ItemStack(Material.WOODEN_SWORD, 1);
             ItemMeta meta = item.getItemMeta();
             assert meta != null;
             meta.setDisplayName("Whip");
