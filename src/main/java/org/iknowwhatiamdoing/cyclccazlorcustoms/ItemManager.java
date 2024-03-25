@@ -237,7 +237,7 @@ public class ItemManager{
             meta.addEnchant(Enchantment.SWEEPING_EDGE, 1, true);
             meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             item.setItemMeta(meta);
-
+            whip = item;
 
             ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("whip"), item);
             sr.shape("  s", " s ", "ls ");
