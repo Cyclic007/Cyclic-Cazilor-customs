@@ -43,10 +43,9 @@ public class AttackEvents implements Listener, Plugin {
         int i;
         LivingEntity tempEntity;
         Bukkit.getLogger().info("the vars are ready");
-        Vector[] senders =giveMeTheRays(30 , 30F,face);
-        Bukkit.getLogger().info("he gave me the vectors" );
 
         if (itemMeta != null && itemMeta.hasDisplayName() && itemMeta.getDisplayName().contains("whip")) {
+            Vector[] senders =giveMeTheRays(30 , 30F,face);
             for(i=0; i<30;i++) {
                 Bukkit.getLogger().info("the death ray has been fired");
                 hits[i] = (Entity) world.rayTraceEntities(loc, senders[i], 5);
@@ -193,8 +192,6 @@ public class AttackEvents implements Listener, Plugin {
         }
         for(iterations =0; iterations<= vectors1.length;iterations++){
             try {
-
-
                 vectors[iterations + vectors1.length] = vectors1[iterations];
                 Bukkit.getLogger().info(String.valueOf(iterations));
             }catch (Exception exception){
