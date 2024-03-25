@@ -206,9 +206,9 @@ public class ItemManager{
             ItemStack item = new ItemStack(Material.HONEY_BOTTLE, 4);
             ItemMeta meta = item.getItemMeta();
             assert meta != null;
-            meta.setDisplayName("Jack Danals");
+            meta.setDisplayName("§4Jack Danals");
             List<String> lore = new ArrayList<>();
-            lore.add("YAY a fitting bevrige");
+            lore.add("§0YAY a fitting bevrige");
             meta.setLore(lore);
             item.setItemMeta(meta);
             meta.addEnchant(Enchantment.LUCK, 1, true);
@@ -229,10 +229,10 @@ public class ItemManager{
             ItemStack item = new ItemStack(Material.WOODEN_SWORD, 1);
             ItemMeta meta = item.getItemMeta();
             assert meta != null;
-            meta.setDisplayName("Whip");
+            meta.setDisplayName("§4Whip");
             meta.setCustomModelData(70);
             List<String> lore = new ArrayList<>();
-            lore.add("And you whip and you ney ney");
+            lore.add("§0And you whip and you ney ney");
             meta.setLore(lore);
             meta.addEnchant(Enchantment.SWEEPING_EDGE, 1, true);
             meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
