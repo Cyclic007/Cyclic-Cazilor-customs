@@ -240,7 +240,7 @@ public class ItemManager{
 
 
             ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("whip"), item);
-            sr.shape("tl ", " s ", "  s");
+            sr.shape("  s", " s ", "ls ");
             sr.setIngredient('l', Material.LEATHER);
             sr.setIngredient('t', Material.STICK);
             sr.setIngredient('s', Material.STRING);
