@@ -37,13 +37,14 @@ public class ConsumeEvents implements Listener, Plugin {
                     if (player.hasPotionEffect(PotionEffectType.DARKNESS)) {
                         if (player.hasPotionEffect(PotionEffectType.POISON)) {
                             if (player.hasPotionEffect(PotionEffectType.HUNGER)) {
-                                player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 225, 20));
+                                player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 20, 225));
                             }
                         } else {
                             player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 2000, 1));
                         }
                     } else {
                         player.addPotionEffect(new PotionEffect(PotionEffectType.DARKNESS, 2000, 6));
+                        player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 2000, 6));
                     }
                 } else {
                     player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 6000, 3));

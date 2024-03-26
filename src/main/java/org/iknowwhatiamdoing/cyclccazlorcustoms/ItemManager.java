@@ -219,7 +219,7 @@ public class ItemManager{
             shr.shape("HWH", "WBW", "HWH");
             shr.setIngredient('W', Material.WHEAT);
             shr.setIngredient('B', Material.GLASS_BOTTLE);
-            shr.setIngredient('H', Material.HONEY_BOTTLE);
+            shr.setIngredient('H', Material.CHARCOAL);
             Bukkit.getServer().addRecipe(shr);
             Bukkit.getLogger().info("the jack is ready");
 
@@ -240,10 +240,11 @@ public class ItemManager{
             whip = item;
 
             ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("whip"), item);
-            sr.shape("  s", " s ", "tl ");
+            sr.shape("  w", " s ", "tl ");
             sr.setIngredient('l', Material.LEATHER);
             sr.setIngredient('t', Material.STICK);
             sr.setIngredient('s', Material.STRING);
+            sr.setIngredient('w', Material.DIAMOND_SWORD);
             Bukkit.getServer().addRecipe(sr);
             getLogger().info("yay the second time");
 

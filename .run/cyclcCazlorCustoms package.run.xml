@@ -3,12 +3,12 @@
     <MavenSettings>
       <option name="myGeneralSettings">
         <MavenGeneralSettings>
-          <option name="alwaysUpdateSnapshots" value="false" />
+          <option name="alwaysUpdateSnapshots" value="true" />
           <option name="checksumPolicy" value="NOT_SET" />
           <option name="customMavenHome" />
           <option name="emulateTerminal" value="false" />
           <option name="failureBehavior" value="NOT_SET" />
-          <option name="localRepository" value="" />
+          <option name="localRepository" value="$MAVEN_REPOSITORY$" />
           <option name="mavenHome" value="Bundled (Maven 3)" />
           <option name="mavenHomeTypeForPersistence" value="BUNDLED3" />
           <option name="nonRecursive" value="false" />
