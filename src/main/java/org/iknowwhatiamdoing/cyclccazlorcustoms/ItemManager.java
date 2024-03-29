@@ -19,7 +19,6 @@ public class ItemManager{
     public static ItemStack throw_bomb;
     public static ItemStack mermaid_charm;
     public static ItemStack float_charm;
-    public static ItemStack whip;
     public static ItemStack JackDanals;
     public static ItemStack fang_shield;
     public static void init() {
@@ -237,7 +236,7 @@ public class ItemManager{
             meta.addEnchant(Enchantment.SWEEPING_EDGE, 1, true);
             meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             item.setItemMeta(meta);
-            whip = item;
+
 
             ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("whip"), item);
             sr.shape("  w", " s ", "tl ");

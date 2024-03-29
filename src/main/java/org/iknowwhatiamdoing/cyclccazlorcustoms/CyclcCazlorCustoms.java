@@ -2,6 +2,8 @@ package org.iknowwhatiamdoing.cyclccazlorcustoms;
 
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
+//todo whip
+//todo make texture pack
 
 /*    */
 /*    */ public class CyclcCazlorCustoms extends JavaPlugin {
@@ -24,6 +26,7 @@ import org.bukkit.plugin.java.JavaPlugin;
         /* 29 */
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[CazilorCustoms]: Plugin is enabled!");
         /*    */
+
     }
 
     /*    */
