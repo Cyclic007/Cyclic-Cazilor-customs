@@ -24,11 +24,11 @@ public class AttackEvents implements Listener {
         Location loc = player.getEyeLocation();
         Entity[] hits = new Entity[30];
         LivingEntity temp ;
-        Vector perpFace =face.r;
+        Vector faceNoY = new Vector(face.getX(),0,face.getY());
         Vector theprintedVector;
         int i;
         for(i=0; i<15;i++){
-            theprintedVector = rotate(face,perpFace,45.0/30.0*i);
+            theprintedVector = rotate(faceNoY,new Vector(0,1,0),45.0/30.0*i).setY(face.getY());
             Bukkit.getLogger().info(theprintedVector.toString());
             hits[i] = (Entity) world.rayTraceEntities(loc,theprintedVector,5);
             assert hits[i] != null;
@@ -40,7 +40,7 @@ public class AttackEvents implements Listener {
             temp.damage(4);
         }
         for(i=0; i<15;i++){
-            theprintedVector = rotate(face,perpFace,45.0/30.0*-i);
+            theprintedVector = rotate(faceNoY,new Vector(0,1,0),45.0/30.0*-i).setY(face.getY());
             Bukkit.getLogger().info(theprintedVector.toString());
             hits[i] = (Entity) world.rayTraceEntities(loc,theprintedVector,5);
             assert hits[i] != null;
